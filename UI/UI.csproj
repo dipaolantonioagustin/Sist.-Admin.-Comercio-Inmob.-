@@ -1,0 +1,294 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A38C306A-8C6D-433D-94B7-472948A5290C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>UI</RootNamespace>
+    <AssemblyName>UI</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1537.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1537.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1537.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1537.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebDesign, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.1537.0\lib\net40\Microsoft.ReportViewer.WebDesign.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.1537.0\lib\net40\Microsoft.ReportViewer.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1537.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Direccion.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Direccion.Designer.cs">
+      <DependentUpon>Direccion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExcepcionCamposVacios.cs" />
+    <Compile Include="FRReporte2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRReporte2.Designer.cs">
+      <DependentUpon>FRReporte2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRCaja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRCaja.Designer.cs">
+      <DependentUpon>FRCaja.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRCajaChica.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRCajaChica.Designer.cs">
+      <DependentUpon>FRCajaChica.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRContrato.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRContrato.Designer.cs">
+      <DependentUpon>FRContrato.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRCuenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRCuenta.Designer.cs">
+      <DependentUpon>FRCuenta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRLocalidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRLocalidad.Designer.cs">
+      <DependentUpon>FRLocalidad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRInquilino.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRInquilino.Designer.cs">
+      <DependentUpon>FRInquilino.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRPrincipal.Designer.cs">
+      <DependentUpon>FRPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRPropiedad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRPropiedad.Designer.cs">
+      <DependentUpon>FRPropiedad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRPropietario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRPropietario.Designer.cs">
+      <DependentUpon>FRPropietario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRReporte1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRReporte1.Designer.cs">
+      <DependentUpon>FRReporte1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRReporte3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRReporte3.Designer.cs">
+      <DependentUpon>FRReporte3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRReportes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRReportes.Designer.cs">
+      <DependentUpon>FRReportes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoguinUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoguinUsuario.Designer.cs">
+      <DependentUpon>LoguinUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Nombre.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Nombre.Designer.cs">
+      <DependentUpon>Nombre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="DNI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DNI.Designer.cs">
+      <DependentUpon>DNI.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Direccion.resx">
+      <DependentUpon>Direccion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRCaja.resx">
+      <DependentUpon>FRCaja.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRCajaChica.resx">
+      <DependentUpon>FRCajaChica.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRContrato.resx">
+      <DependentUpon>FRContrato.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRCuenta.resx">
+      <DependentUpon>FRCuenta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRInquilino.resx">
+      <DependentUpon>FRInquilino.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRLocalidad.resx">
+      <DependentUpon>FRLocalidad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRPrincipal.resx">
+      <DependentUpon>FRPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRPropiedad.resx">
+      <DependentUpon>FRPropiedad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRPropietario.resx">
+      <DependentUpon>FRPropietario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRReporte1.resx">
+      <DependentUpon>FRReporte1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRReporte2.resx">
+      <DependentUpon>FRReporte2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRReporte3.resx">
+      <DependentUpon>FRReporte3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRReportes.resx">
+      <DependentUpon>FRReportes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRRepote2.rdlc" />
+    <EmbeddedResource Include="LoguinUsuario.resx">
+      <DependentUpon>LoguinUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Nombre.resx">
+      <DependentUpon>Nombre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Report1.rdlc" />
+    <EmbeddedResource Include="DNI.resx">
+      <DependentUpon>DNI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report3.rdlc" />
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\BE.BEFormato.datasource" />
+    <None Include="Properties\DataSources\BE.BEInquilino.datasource" />
+    <None Include="Properties\DataSources\BE.BELocalidad.datasource" />
+    <None Include="Properties\DataSources\BE.BEOperacion.datasource" />
+    <None Include="Properties\DataSources\BE.BEOperacionCajaChica.datasource" />
+    <None Include="Properties\DataSources\BE.BEPropiedad.datasource" />
+    <None Include="Properties\DataSources\BE.BEPropiedadReporte.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BE\BE.csproj">
+      <Project>{a9bca2f5-9f6b-40f1-80a2-22c030f87a3a}</Project>
+      <Name>BE</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{949656d0-1ac0-4a37-84c1-ea73028f6e9d}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SeguridadLoguin\SeguridadLoguin.csproj">
+      <Project>{0b4651c4-fcf0-4eff-ad06-5d93d79f80d6}</Project>
+      <Name>SeguridadLoguin</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
